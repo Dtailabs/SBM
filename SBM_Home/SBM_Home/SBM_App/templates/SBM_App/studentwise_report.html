@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<title>DateWise Report</title>
+</head>
+<body>
+	<div class="ui field">
+		<form class="ui form" name="form" action='/get_studentwise_logs_home' method="POST">{% csrf_token %}
+			<button class="ui left floated green button">Check Another Record</button>
+			<!-- <button class="ui green button" type="submit">Check Another Record</button> -->
+		</form>
+
+		<a  href="get_studentwise_download" download><button class="ui right floated button"><i class="download icon"></i>Download Report</button></a>
+	</div>
+	<!-- <a  href="get_attendance_download" download><button class="ui fluid right button"><i class="download icon"></i>Download Report</button></a> -->
+	<h3 class="ui center header">
+	   	<center>StudentWise Report</center>
+	</h3>
+	<!-- <h3 class="ui center"> -->
+	<center style="font-size: 18px"><b>RollNumber:</b> {{user_id}}&nbsp;&nbsp;&nbsp;&nbsp;<b>Name:</b> {{user_name}}&nbsp;&nbsp;&nbsp;&nbsp;<b>Class:</b> {{user_class}}&nbsp;&nbsp;&nbsp;&nbsp;<b>Section:</b> {{user_section}}&nbsp;&nbsp;&nbsp;&nbsp;<b>Month:</b> {{user_month}}</center>
+	<!-- </h3> -->
+
+	
+	
+	<table class="ui table">
+		<thead>
+			<th>Date</th>
+			<th>Time In</th>
+			<th>Time Out</th>
+			<th>Duration (H:M)</th>
+			<th>Summary</th>
+			<th>Status</th>
+		</thead>
+		<tbody>
+
+			{% for date,time_in,time_out,dur,summary,status in data %}
+			<tr>
+				<td>{{date}}</td>
+				<td>{{time_in}}</td>
+				<td>{{time_out}}</td>
+				<td>{{dur}}</td>
+				<td>{{summary}}</td>
+				<td>{{status}}</td>
+				<!-- <td><a href="Upload/?id={{uid}}"><button class="ui blue button">Get More Details</button></a></td> -->
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends './base.html' %}
+{% block content %}
+<style type="text/css">
+	.grid.container {
+	  margin-top: 5em;
+	}
+	.inputfile {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+</style>
+<div class='ui three column centered stackable grid'>
+	<div class='column'>
+		
+		<!-- <form name = "form" action="/login_face_1_all"  method="POST" >{% csrf_token %} -->
+			<div class='ui column segment' style="background-color:rgba(153, 33, 134, 0.6);">
+				<div class='ui blue inverted raised segment centered header'><i class='user icon'></i>Login</div>
+				<!-- <div class='ui fluid icon input'>
+					<label style='margin-top:10px;'><b>Roll Number:&nbsp;&nbsp;&nbsp;</b></label>
+					<input type='number' name='uid' placeholder='Enter Your roll Number'  pattern='[1-9][0-9]+' oninvalid="setCustomValidity('Only Numbers\nmin_length=3\nshould not start with 0)" onchange='try{setCustomValidity("")}catch(e){}'>
+				</div> -->
+				<br><br>
+			<div class="ui placeholder segment" style="height: 142px;margin-top: -32px;">
+			  	<div class="ui two column very relaxed stackable grid">
+			    	<div class="column">
+			      		<form name="form" action="/login_face_video" enctype="multipart/form-data" method="POST" >{% csrf_token %}
+			      			<div class="field">
+                                <label for="embedpollfileinput" class="upload-btncustom ui huge violet button" style="padding: 10px;margin-top: 3px;margin-left: 11px;font-size: 16px;">
+                                    <i class="ui file video icon"></i> Select Video
+                                </label>
+
+                                <input type="file" class="inputfile" id="embedpollfileinput" name="video" required/>
+                            </div>
+                            <input type="submit" value="Submit" class="ui blue submit button" style="margin-left: 39px;margin-top: 31px;">
+				        	<!-- <div class="ui blue submit button" style="margin-left: 39px;margin-top: 31px;">Login</div> -->
+			      		</form>
+			    	</div>
+				    <div class="middle aligned column">
+					    <form name = "form" action="/login_face_realtime" method="POST" >{% csrf_token %}
+					    	<button type='submit' class='ui orange button'><i class='video icon'></i>Real Time Recognition</button>
+					    </form>
+				    </div>
+			  	</div>
+			  	<div class="ui vertical divider">
+			    Or
+			  	</div>
+			</div>
+				<!-- <button type='submit' class='ui orange button' style='margin-left:130px'><i class='camera icon'></i>Real Time Recognition</button> -->
+			</div>
+		<!-- </form> -->
+	</div>
+	<!-- <div class='column' style='margin-top:-50px;margin-left:50px;width:600px'>
+		<div class='ui column segment' style='background-color:rgba(255,255,255,0.3)'>
+			<div class='ui blue inverted raised segment centered header'><i class='user icon'></i>Demo Pose</div>
+			<img src='/static/images/demo.jpg' style='margin-left:60px;height:350px;width:400px;'>
+		</div>
+	</div> -->
+</div>
+<br><br><br><br><br>
+{% endblock %}

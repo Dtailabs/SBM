@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<title>Attendance Database</title>
+</head>
+<body class="ui container">
+
+		<table class="ui table">
+		<thead>
+			<th>Student ID</th>
+			<!-- <th>Student Name</th>
+			<th>Class ID</th>
+			<th>Section ID</th> -->
+			<th>Date</th>
+			<th>Day</th>
+			<th>Month</th>
+			<th>Year</th>
+			<th>In-Time</th>
+			<th>Out-Time</th>
+			<th>Duration</th>
+			<th>Summary</th>
+			<th>Status</th>
+		</thead>
+		<tbody>
+
+			{% for uid,date,day,month,year,in_time,out_time,duration,summary,status in data %}
+			<tr>
+				<td>{{uid}}</td>
+				<!-- <td>{{uname}}</td>
+				<td>{{class_id}}</td>
+				<td>{{section_id}}</td> -->
+				<td>{{date}}</td>
+				<td>{{day}}</td>
+				<td>{{month}}</td>
+				<td>{{year}}</td>
+				<td>{{in_time}}</td>
+				<td>{{out_time}}</td>
+				<td>{{duration}}</td>
+				<td>{{summary}}</td>
+				<td>{{status}}</td>
+				<!-- <td><a href="Upload/?id={{uid}}"><button class="ui blue button">Get More Details</button></a></td> -->
+			</tr>
+			{% endfor %}
+		</tbody>
+		</table>
+</body>
+</html>

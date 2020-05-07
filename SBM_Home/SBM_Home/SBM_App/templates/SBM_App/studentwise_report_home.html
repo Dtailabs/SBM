@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<title>StudentWise Report</title>
+</head>
+<body>
+	<form class="ui form" name="form" action='/get_studentwise_logs' method="POST">{% csrf_token %}	
+	  	<div class="fields">
+	    	<div class="field">
+	      		<label>Roll Number</label>
+	      		<input type="text" name="roll_no" placeholder="Student Roll Number" required>
+	    	</div>
+	    	<div class="field">
+	      		<label>Month</label>
+	      		<input type="text" name="month" placeholder="Month ID" required>
+	    	</div>
+		    <div class="field">
+		      <label>Year</label>
+		      <input type="text" name="year" placeholder="Year" required>
+		    </div>
+	  	</div>
+	  	<button class="ui button" type="submit">Submit</button>
+	</form>
+</body>
+</html>

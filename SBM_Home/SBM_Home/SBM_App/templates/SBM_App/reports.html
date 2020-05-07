@@ -1,0 +1,66 @@
+{% extends './base.html' %}
+{% block content %}
+<div class='ui three column centered stackable grid'>
+	<div class='column'>
+		<!-- <form class="ui form" name="form" action='/register_face' method="POST">{% csrf_token %} -->
+			<div class='ui column segment' style="background-color:rgba(0, 255, 112, 0.69);">
+			  	<h4 class="ui dividing header">Based On Date</h4>
+			  	
+			    <div class="field">
+			        <label>Select Date</label>
+			        <div class="fields">
+				        <div class="field">
+				            <input type="text" name="date" maxlength="10" placeholder="Enter Date here">
+				        </div>
+			        </div>
+			    </div>
+			    <a  href="download" download><button class="ui fluid button"><i class="download icon"></i>Download Report</button></a>
+		    <!-- <button type='submit' class='ui orange button' style='margin-left:130px'>Get Report</i></button> -->
+		<!-- </form> -->
+	</div>
+	<div class='column'>
+		<form class="ui form" name="form" action='/time_based_logs' method="POST">{% csrf_token %}
+			<div class='ui column segment' style="background-color:rgba(0, 255, 112, 0.69);">
+			  	<h4 class="ui dividing header">Based On Time</h4>
+			    <div class="two fields">
+			        <label>From</label>
+			        <div class="fields">
+				        <div class="field">
+				            <input type="text" name="from_time" maxlength="10" placeholder="From Time">
+				        </div>
+			        </div>
+			        <label>To</label>
+			        <div class="fields">
+				        <div class="field">
+				            <input type="text" name="to_time" maxlength="10" placeholder="To Time">
+				        </div>
+			        </div>
+			    </div>
+		    <button type='submit' class='ui orange button' style='margin-left:130px'>Get Report</i></button>
+		</form>
+	</div>
+	<div class='column'>
+		<form class="ui form" name="form" action='/register_face' method="POST">{% csrf_token %}
+			<div class='ui column segment' style="background-color:rgba(0, 255, 112, 0.69);">
+			  	<h4 class="ui dividing header">Registration Information</h4>
+			  	
+			    <div class="field">
+			        <label>Mobile Number</label>
+			        <div class="fields">
+				        <div class="four wide field">
+				            <input type="text" name="country_code" placeholder="+91" disabled>
+				        </div>
+				        <div class="twelve wide field">
+				            <input type="text" name="mobile_no" maxlength="10" placeholder="Mobile Number">
+				        </div>
+			        </div>
+			    </div>
+		    <button type='submit' class='ui orange button' style='margin-left:130px'><i class='camera icon'></i></button>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	$('#example1').calendar();
+</script>
+<br><br><br><br><br>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Face Verification System</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/icon.min.css">
+		<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/js/semantic.min.js"></script>
+		<style type="text/css">
+			#menubar:hover{
+				background-color:lightgreen;
+			}
+			#menubar{
+				color:white;
+				font-weight: bold;
+			}
+
+		</style>
+	</head>
+<body style="background-image: url('/static/images/galaxy.png');background-size: cover;">
+	<div class="ui piled segment" style="background-image: url('/static/images/thead2.jpg');height: 7em;">
+		<div class="ui blue centered header" style="font-size: 3em;font-family: 'Georgia';">
+			 <img style="width: 60px;height:60px;margin-top:-10px" src="/static/images/school.png" class="ui circular image"></i><span style="color: pink; font-size:30px;">&nbsp;&nbsp;School Management System</span>
+		</div>
+		<div class="" style="height: 10px;">
+			<div class='ui inverted teal raised menu' style='height:4em;'>
+				<a href='/register_here_face' class='item' id='menubar'>Home</a>
+				<!-- <a href='#' class='item' id='menubar'>Our Products</a> -->
+				<!-- <a href='#' class='item' id='menubar'>About</a> -->
+				<a href='/login_here_face' class='item' id='menubar'><i class='user icon'></i>Login</a>
+				<a href='/register_here_face' class='item' id='menubar'>Register</a>
+				<a href='/get_registered_users' class='item' id='menubar' align='right'>Users</a>
+				<a href='/Attendance_DB_init' class='item' id='menubar' align='right'>Update_Att_Table</a>
+				<a href='/get_student_logs' class='item' id='menubar' align='right'>Student Logs</a>
+				<a href='/get_attendance_logs' class='item' id='menubar' align='right'>Attendance Logs</a>
+				<a href='/get_datewise_logs_home' class='item' id='menubar' align='right'>DateWiseReport</a>
+				<a href='/get_studentwise_logs_home' class='item' id='menubar' align='right'>StudentWiseReport</a>
+				<!-- <a href='/report_here_logs' class='item' id='menubar' align='right'>Reports</a> -->
+			</div>
+		</div>
+	</div>
+		<br><br><br><br>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

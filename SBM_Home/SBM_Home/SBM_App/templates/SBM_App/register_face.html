@@ -1,0 +1,115 @@
+{% extends './base.html' %}
+{% block content %}
+<div class='ui three column centered stackable grid'>
+	<div class='column'>
+		<!-- <form name="form" action='/register_face'  method="POST">{% csrf_token %}
+			<div class='ui column segment' style="background-color:rgba(0, 255, 112, 0.69);">
+				<div class='ui blue inverted raised segment centered header'><i class='user icon'></i>Registration</div>
+
+				<div class='ui fluid icon input'>
+					<label style='margin-top:10px'><b>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+					<input type='text' placeholder='Enter your Name' pattern='[a-zA-Z_]+' minlength='5' maxlength='25' name='uname' oninvalid="setCustomValidity('Name Should be having Alphabets or _')" onchange='try{setCustomValidity("")}catch(e){}' required /><i class='user icon'></i>
+				</div><br/>
+				<div class='ui fluid icon input'>
+					<label style='margin-top:10px;'><b>Roll Number:&nbsp;&nbsp;&nbsp;</b></label>
+					<input type='number' onblur="unique_user()" placeholder='Enter Your roll Number' name='uid' pattern='[1-9][0-9]+' oninvalid="setCustomValidity('Only Numbers\nmin_length=3\nshould not start with 0)" onchange='try{setCustomValidity("")}catch(e){}' required>
+				</div>
+				<br><br>
+				<button type='submit' class='ui orange button' style='margin-left:130px'><i class='camera icon'></i>Take Pictures</button>
+			</div>
+		</form> -->
+		<form class="ui form" name="form" action='/register_face' style="margin-top: -59px;" method="POST">{% csrf_token %}
+			<div class='ui column segment' style="background-color:rgba(0, 255, 112, 0.69);">
+			  	<h4 class="ui dividing header">Registration Information</h4>
+			  	<div class="field">
+			    	<label>Name</label>
+				    <div class="two fields">
+				      <div class="field">
+				        <input type="text" name="fname" placeholder="First Name">
+				      </div>
+				      <div class="field">
+				        <input type="text" name="lname" placeholder="Last Name">
+				      </div>
+				    </div>
+			  	</div>
+			    <div class="field">
+			        <label>Mobile Number</label>
+			        <div class="fields">
+				        <div class="four wide field">
+				            <input type="text" name="country_code" placeholder="+91" disabled>
+				        </div>
+				        <div class="twelve wide field">
+				            <input type="text" name="mobile_no" maxlength="10" placeholder="Mobile Number">
+				        </div>
+			        </div>
+			    </div>
+			    <div class="two fields"></div>
+			  		<div class="field">
+			  			<label>Date Of Birth</label>
+			  		</div>
+			  		<div class="field">
+				  		<div class="ui input left icon">
+						    <i class="calendar icon"></i>
+						    <input name="dob" type="text" placeholder="Date">
+						</div>
+						
+					</div>
+		  		<div class="two fields">
+		    		<div class="field">
+		      			<label>Parent/Gaurdian Name</label>
+		      			<div class="field">
+				            <input type="text" name="parent" placeholder="Parent Name">
+				        </div>
+		    		</div>
+		    		<div class="field">
+			      		<label>Sex</label>
+			      			<select name="sex" class="ui fluid dropdown">
+			        		<option value="1">Male</option>
+						    <option value="2">Female</option>
+					    </select>
+		    		</div>
+		  		</div>
+				<h4 class="ui dividing header">Extra Info</h4>
+				<div class="field">
+		    		<label>Email Address</label>
+	    			<div class="field">
+			            <input type="text" name="email" placeholder="Email Address">
+			        </div>
+				</div>
+		    <div class="fields">
+		        <div class="eight wide field">
+			        <label>User ID</label>
+			        <input type="text" name="user_id" maxlength="16" placeholder="User ID">
+			    </div>
+			    <div class="four wide field">
+			        <label>Class ID</label>
+			        <input type="text" name="class_id" maxlength="16" placeholder="Class Number">
+			    </div>
+			    <div class="four wide field">
+			        <label>Section ID</label>
+			        <input type="text" name="section_id" maxlength="16" placeholder="Section Number">
+			    </div>
+			</div>
+			<div class="ui form">
+			    <div class="field">
+			    	<label>Address</label>
+			    	<textarea name="addr" rows="2"></textarea>
+			  	</div>
+			</div>
+		    <button type='submit' class='ui orange button' style='margin-left:130px'><i class='camera icon'></i>Take Pictures</button>
+		</form>
+	</div>
+	<!-- <div class='column' style='margin-top:-50px;margin-left:50px;width:600px'>
+		<div class='ui column segment' style='background-color:rgba(255,255,255,0.3)'>
+			<form class='ui form' method='get'>
+				<div class='ui blue inverted raised segment centered header'><i class='user icon'></i>Demo Pose</div>
+				<img src='/static/images/demo.jpg' style='margin-left:60px;height:350px;width:400px;'>
+			</form>
+		</div>
+	</div> -->
+</div>
+<script type="text/javascript">
+	$('#example1').calendar();
+</script>
+<br><br><br><br><br>
+{% endblock %}

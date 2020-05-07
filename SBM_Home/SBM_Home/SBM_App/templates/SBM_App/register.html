@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>School Business Model</title>
+
+   
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css ">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid register">
+	<div class="overlybgimg"> <img src="assets/images/regBg2.png"  alt=""></div>
+	    <div class="header-top reg">
+               <div class="container pt-2">
+                   <div class="row pt-1">
+                       <div class="col-md-4 logo">
+                           <img src="assets/images/home-logo.png"  alt="">
+                       
+                       </div>
+                       <div class="col-md-8 float-right">
+                           <ul>
+                               <li class="bgb"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                               <li class="bgb"><a href="report.html"><i class="fas fa-chart-bar"></i> Report</a></li>
+                               <li class="bgb"><a href="register.html"> <i class="far fa-address-card"></i> Register </a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+        </div>
+		
+		 <div class="row  mr-0 ml-0  innerWrapper">
+                    <div class="col-md-3 register-left">
+                       
+                      
+                    </div>
+                    <div class="col-md-9 register-right">
+					<div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<form>
+                                <h6 class="register-heading">AREGISTER YOUR INFORMATION</h6>
+                                <div class="row register-form">
+								<div class="col-md-12 fds">
+								<div class="row">
+								<div class="col-md-6 df-text"><label class="mt-2">Admission No/Roll No : <span style="font-weight:bold;"> ADM4567345665</span></label></div>
+								<div class="col-md-6">
+								<!-- <label>Upload Photo : <span class=""> </span> </label> -->
+									   <div class="custom-file">
+                <input type="file" class="custom-file-input" id="inputGroupFile02"/>
+                <label class="custom-file-label" for="inputGroupFile02">Upload Photo</label>
+				<div class="input-group-append">
+               <i class="fas fa-camera"></i>
+            </div>
+            </div>
+            
+
+								
+								</div>
+								</div>
+								</div>
+                                    <div class="col-md-6 mt-5">
+                                        <div class="form-group">
+										<label>Name :</label>
+                                            <input type="text" class="form-control" placeholder="Name *" value="">
+                                        </div>
+                                        <div class="form-group">
+										<label>Address :</label>
+                                            <textarea class="form-control" rows="2"   placeholder="Address *" value=""></textarea>
+                                        </div>
+                                        <div class="form-group">
+										<label>Date of Admitted :</label>
+                                            <input type="password" class="form-control" placeholder="Password *" value="">
+                                        </div>
+                                       
+                                        <div class="form-group">
+										<label class="d-block">Gender :</label>
+										<div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" class="custom-control-input" id="customRadio" name="gender" value="male" checked="">
+											<label class="custom-control-label" for="customRadio">Male</label>
+										  </div>
+										  <div class="custom-control custom-radio custom-control-inline">
+											<input type="radio" class="custom-control-input" id="customRadio2" name="gender" value="female">
+											<label class="custom-control-label" for="customRadio2">Female</label>
+										  </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-5">
+                                        <div class="form-group">
+										<label>DOB :</label>
+                                            <input type="email" class="form-control" placeholder="DOB *" value="">
+                                        </div>
+                                        <div class="form-group">
+										<label>Parent/Guardian :</label>
+                                            <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Parent/Guardian *" value="">
+                                        </div>
+                                        <div class="form-group">
+										<label>Mobile No :</label>
+                                             <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Mobile No *" value="">
+                                        </div>
+                                        <div class="form-group">
+										<label>Email :</label>
+                                            <input type="text" class="form-control" placeholder="Email *" value="">
+                                        </div>
+                                       
+                                    </div>
+									 <div class="col-md-12">
+									 <div class="row">
+									 <div class="col-md-3"></div>
+									  <div class="col-md-6">
+									     <input type="submit" class="btnRegister ca" value="Cancel">
+										 <input type="submit" class="btnRegister" value="Register">
+									  </div>
+									 <div class="col-md-3"></div>
+									  </div>
+                                    </div>
+								</div>
+									</form>
+                            </div>
+                            
+                        </div>
+				    </div>
+		  </div>			
+					
+        <!--  <div class="row cdvfdfd mr-0 ml-0 "> 
+		 <div class="foter-credit">
+                     <a href="http://satragroup.in/" target="_blank" >Developed by  : <span class="text-color">SATRA</span></a>  
+         </div>
+         </div> -->
+    </div>
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+ <script type="text/javascript">
+        $(document).ready(function() {
+            var winh = $(window).height();
+            var otherH = 110;
+            var finalH = (winh - otherH);
+           
+            $('.innerWrapper').css('height', finalH + 'px');
+         
+            $(window).resize(function() {
+                $('.innerWrapper').css('height', finalH + 'px');
+               
+
+            });
+			 });
+			 
+			 $('#inputGroupFile02').on('change',function(){
+                //get the file name
+                var fileName = $(this).val();
+                //replace the "Choose a file" label
+                $(this).next('.custom-file-label').html(fileName);
+            })
+</script>
+
+
+</html>

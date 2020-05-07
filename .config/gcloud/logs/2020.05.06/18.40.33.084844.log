@@ -1,0 +1,22 @@
+2020-05-06 18:40:33,086 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth']
+2020-05-06 18:40:33,089 DEBUG    root            Loaded Command Group: [u'gcloud', u'auth', u'configure_docker']
+2020-05-06 18:40:33,091 DEBUG    root            Running [gcloud.auth.configure-docker] with arguments: [--quiet: "True"]
+2020-05-06 18:40:33,182 WARNING  root            Your config file at [/home/rajharry418/.docker/config.json] contains these credential helper entries:
+
+{
+  "credHelpers": {
+    "asia.gcr.io": "gcloud", 
+    "staging-k8s.gcr.io": "gcloud", 
+    "us.gcr.io": "gcloud", 
+    "gcr.io": "gcloud", 
+    "marketplace.gcr.io": "gcloud", 
+    "eu.gcr.io": "gcloud"
+  }
+}
+2020-05-06 18:40:33,182 INFO     ___FILE_ONLY___ Adding credentials for all GCR repositories.
+
+2020-05-06 18:40:33,183 WARNING  root            A long list of credential helpers may cause delays running 'docker build'. We recommend passing the registry name to configure only the registry you are using.
+2020-05-06 18:40:33,183 INFO     ___FILE_ONLY___ gcloud credential helpers already registered correctly.
+
+2020-05-06 18:40:33,184 INFO     root            Display format: "default"
+2020-05-06 18:40:33,185 DEBUG    root            SDK update checks are disabled.
